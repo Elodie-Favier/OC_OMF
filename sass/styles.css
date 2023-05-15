@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans serif;
+  margin: 0;
+}
+
+.main-container {
+  background-color: #FFF;
+  width: 375px;
+}
+
+.header {
+  width: 100%;
+}
+
+.heading {
+  height: 63px;
+}
+
+.title__logo {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.location {
+  background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.fa-location-dot {
+  margin-right: 20px;
+}
+
+.explore {
+  background-color: #F3F3F3;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.explore__title {
+  width: 275px;
+  height: 68px;
+  text-align: center;
+}
+
+.explore__subtitle {
+  width: 315px;
+  height: 46px;
+  text-align: center;
+}
+
+.btn {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  color: #FFF;
+  background-color: #9356DC;
+}
+
+.operation {
+  background-color: #FFF;
+  padding: 20px 50px;
+}
+
+.restau {
+  background-color: #F3F3F3;
+}
+
+.restau-cards {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 251px;
+  padding: 3px 0 3px 0;
+  background-color: #F7F7F7;
+}
+
+.card__img_et_new {
+  background-color: transparent;
+}
+
+.badge {
+  position: absolute;
+  right: 20%;
+  background-color: #99E2D0;
+  color: #008766;
+}
+
+.card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90%;
+  border-radius: 15px;
+  height: 132px;
+}
+
+.card-text {
+  height: 77px;
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFF;
+}/*# sourceMappingURL=styles.css.map */

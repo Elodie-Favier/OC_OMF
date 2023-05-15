@@ -1,6 +1,9 @@
-body {
-    background-color: burlywood;
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
 }
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
+.footer__info .footer__info__text {
+  flex-direction: row;
+  background-color: aqua;
+}/*# sourceMappingURL=styles.css.map */
