@@ -19,19 +19,20 @@ $ninth-color:#353535;
     .main-container{
         background-color:#FFF;
         width: 375px;
+        margin: auto;
     }
     .header{
         width: 100%;
     }
     .heading {
         height: 63px;
+        box-shadow: 0px 2px 4px 0px #00000026;
     }
     .title__logo {
         font-family: 'Shrikhand', cursive;
         display: flex;
         justify-content: center;
         margin-top: 15px;
-        
     }
     .location {
         background-color:$eighth-color;
@@ -63,19 +64,70 @@ $ninth-color:#353535;
         height: 46px;
         text-align: center;
     }
-    .btn {
-        width: 218px;
-        height: 50px;
-        border-radius: 25px;
-        color: #FFF;
-        background-color:$third-color ;
+    .btn__explore {
+        width:218px;
+        height:50px;
+        border-radius:25px;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        color:white;
+        border:none;
+        box-shadow: 0px 4px 10px 0px #00000040;
+        text-decoration:none;
+        display:inline-block;
+        cursor:pointer;
+        font-size:16px;
+        
     }
     .operation {
         background-color: #FFF;
-        padding: 20px 50px;
+    }
+    .operation__title {
+        padding: 50px 20px 25px;
+    }
+    .btn__operation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn__box {
+        position: relative;
+    }
+    .btn {
+        width:323px;
+        height:72px;
+        border-radius:20px;
+        background-color:#F6F6F6;
+        color:black;
+        border:none;
+        box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.15);
+        text-decoration:none;
+        display:inline-block;
+        cursor:pointer;  
+        margin-bottom: 25px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .number {
+        position: absolute;
+        top: 23px;
+        left: -10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color:$third-color;
+        border-radius: 15px;
     }
     .restau{
         background-color: $secondary-color;
+        padding: 50px 0;
+    }
+    .section__title {
+        margin: 0 20px 30px;
     }
     .restau-cards {
         display: flex;
@@ -84,41 +136,63 @@ $ninth-color:#353535;
         align-items: center;     
     }
     .card {
-        width: 100%;
+        width: 90%;
         height:251px;
-        padding: 3px 0 3px 0;
-        background-color: $background-color;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+        border-radius: 15px;
+        margin-bottom: 10px;
     }
     .card__img_et_new {
         background-color: transparent;
+        width: 100%;
+        position:relative;
     }
     .badge {
         position: absolute;
-        right: 20%;
+        right: 10px;
+        top:10px;
         background-color: $fourth-color;
         color: $sixth-color;
+        size: 14px;
+        border-radius: 2px;
+        padding: 5px 10px;
     }
     .card__img{
         object-fit: cover;
-        width: 90%;
-        border-radius: 15px;
-        height: 132px;
+        width: 100%;
+        border-radius: 15px 15PX 0 0;
+        height: 174px;
     }
     .card-text{
         height:77px;
-        background-color: $background-color;
         display: flex;
+        padding: 15px 30px 15px 15px;
         flex-direction: row;
         justify-content: space-between;
     }
     .text{
         display: flex;
         flex-direction: column;
+        gap: 5px;
     }
     
     footer{
         background-color:$ninth-color;
         color: #FFF;
+    }
+    .title__logo {
+        color: #FFF;
+        width: 138px;
+        height: 27px;
+        font-size: 18px;
+        font-style: italic;
+    }
+    .footer__info__text {
+        font-size: 16px;
+        font-weight: 500;
     }
     
 
