@@ -3,7 +3,7 @@ body {
 }
 
 * {
-  font-family: "Roboto", sans serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -29,7 +29,7 @@ body {
   margin-top: 15px;
 }
 
-.location {
+.header__location {
   background-color: #EAEAEA;
   display: flex;
   flex-direction: row;
@@ -62,9 +62,10 @@ body {
   width: 315px;
   height: 46px;
   text-align: center;
+  font-size: 18px;
 }
 
-.btn__explore {
+.btn-rounded {
   width: 218px;
   height: 50px;
   border-radius: 25px;
@@ -78,12 +79,18 @@ body {
   font-size: 16px;
 }
 
+.btn-rounded:hover {
+  opacity: 0.8;
+  transition: opacity 250ms;
+}
+
 .operation {
   background-color: #FFF;
 }
 
 .operation__title {
   padding: 50px 20px 25px;
+  font-size: 24px;
 }
 
 .btn__operation {
@@ -96,7 +103,7 @@ body {
   position: relative;
 }
 
-.btn {
+.btn__square {
   width: 323px;
   height: 72px;
   border-radius: 20px;
@@ -155,7 +162,7 @@ body {
   margin-bottom: 10px;
 }
 
-.card__img_et_new {
+.card__img-badge {
   background-color: transparent;
   width: 100%;
   position: relative;
@@ -167,7 +174,6 @@ body {
   top: 10px;
   background-color: #99E2D0;
   color: #008766;
-  size: 14px;
   border-radius: 2px;
   padding: 5px 10px;
 }
@@ -194,20 +200,88 @@ body {
   gap: 5px;
 }
 
-footer {
-  background-color: #353535;
-  color: #FFF;
+.like {
+  background: gray;
 }
 
-.title__logo {
+.like:focus {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.footer__info {
+  background-color: #353535;
+  color: #FFF;
+  padding: 25px;
+}
+
+.footer__logo {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
   color: #FFF;
   width: 138px;
   height: 27px;
-  font-size: 18px;
-  font-style: italic;
 }
 
 .footer__info__text {
+  font-family: Roboto;
+  font-family: Roboto;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer__info__text p {
+  margin-bottom: 5px;
+}
+
+.footer__info__text .fa-solid {
+  margin-left: 10px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+/*****@mediasqueries*******/
+@media screen and (min-width: 1024px) {
+  .main-container {
+    width: 1440px;
+  }
+  .header__logo {
+    height: 96px;
+  }
+  .explore__title {
+    width: auto;
+    font-size: 40px;
+  }
+  .explore__subtitle {
+    width: auto;
+  }
+  .operation {
+    padding-left: 180px;
+  }
+  .operation__title {
+    padding: 50px 0 25px;
+  }
+  .btn__operation {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+  }
+  .restau-cards {
+    width: 1080px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 40%;
+  }
 }/*# sourceMappingURL=styles.css.map */
