@@ -42,6 +42,33 @@ body {
   margin-right: 20px;
 }
 
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.heart__icon--empty {
+  position: absolute;
+  color: black;
+}
+.heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
+}
+.heart__icon:hover .heart__icon--empty {
+  opacity: 0;
+}
+
 .explore {
   background-color: #F3F3F3;
   height: 200px;
@@ -273,11 +300,41 @@ body {
     justify-content: space-between;
     width: 85%;
   }
+  .restau {
+    background-color: #F7F7F7;
+  }
+  .restau__title {
+    padding: 50px 180px 25px;
+  }
   .restau__cards {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 1080px;
+    padding: 0;
+    margin: auto;
+    justify-content: space-between;
   }
   .card {
-    width: 40%;
+    width: 45%;
+    margin-bottom: 40px;
+  }
+  .footer__info {
+    display: flex;
+    flex-direction: row;
+    height: 114px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  .footer__logo {
+    order: 2;
+  }
+  .footer__info__text {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    width: 661px;
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=styles.css.map */
