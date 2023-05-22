@@ -9,6 +9,7 @@ $seventh-color:#003A68;
 $eighth-color:#EAEAEA;
 $ninth-color:#353535;
 
+/******Mobile homepage*********/
     body {
         margin: 0;
     }
@@ -45,33 +46,21 @@ $ninth-color:#353535;
     .fa-location-dot {
         margin-right: 20px;
     }
-    .heart__icon{
-        position: relative;
+    .fa-regular {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 16px;
-        &--empty{
-            position: absolute;
-            color: black;
-        }
-        &--full{
-            position: absolute;
-            opacity: 0;
-            background: linear-gradient(#FF79DA, #9356DC);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            transition: all 400ms;
-        }
-        &:hover &--full{
-            opacity: 1;
-    
-        }
-        &:hover &--empty{
-            opacity: 0;
-        }
+        transition: transform 450ms, background-color 300ms 150ms;
+        
     }
+    .fa-regular:hover{
+        font-weight: 800;
+        opacity: 1;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
+    
     .explore{
         background-color: $secondary-color;
         height: 200px;
@@ -175,6 +164,10 @@ $ninth-color:#353535;
         border-radius: 15px;
         margin-bottom: 10px;
     }
+    .card a {
+        text-decoration: none;
+        color: black;
+    }
     .card__img-badge {
         background-color: transparent;
         width: 100%;
@@ -249,6 +242,98 @@ $ninth-color:#353535;
 .footer__link {
     text-decoration: none;
     color: #FFF;
+}
+/*********page restaurant*************/
+.img-restau {
+    width: 100%;
+    object-fit: cover;
+    height: 275px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu__header {
+    display: flex;
+    flex-direction: row;
+    width: 341px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.menu__title {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+}
+.menu__bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color:$background-color;
+}
+.menu__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.blue-line {
+    border: 1px solid $fourth-color;
+    width: 40px;
+}
+.btn__square-menu{
+        height: 69px;
+        width: 349px;
+        border-radius: 15px;    
+        background-color:#FFF;
+        color:black;
+        border:none;
+        box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.15);
+        text-decoration:none;
+        display:inline-block;
+        cursor:pointer;  
+        margin-bottom: 25px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 10px;
+}
+.menu__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.dish__name{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 5px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.dish__description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.dish__price {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+
 }
 /*****@mediasqueries*******/
 @media screen and (min-width:1024px) {
