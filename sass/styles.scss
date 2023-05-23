@@ -24,6 +24,12 @@ $ninth-color:#353535;
     }
     .header{
         width: 100%;
+        position: relative;
+    }
+    .go-back {
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
     }
     .heading {
         height: 63px;
@@ -253,6 +259,8 @@ $ninth-color:#353535;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F7F7F7;
+    border-radius: 30px;
 }
 .menu__header {
     display: flex;
