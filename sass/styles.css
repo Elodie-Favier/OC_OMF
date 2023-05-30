@@ -12,6 +12,7 @@ body {
   background-color: #FFF;
   width: 375px;
   margin: auto;
+  height: 1512px;
 }
 
 .header {
@@ -21,8 +22,10 @@ body {
 
 .go-back {
   position: absolute;
-  top: 15px;
-  bottom: 15px;
+  left: 3%;
+  right: 22.67%;
+  top: 23.33%;
+  bottom: 23.33%;
 }
 
 .heading {
@@ -50,12 +53,12 @@ body {
   margin-right: 20px;
 }
 
-.fa-regular {
+.fa-heart {
   display: flex;
   transition: transform 450ms, background-color 300ms 150ms;
 }
 
-.fa-regular:hover {
+.fa-heart:hover {
   font-weight: 800;
   opacity: 1;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -92,6 +95,8 @@ body {
   width: 218px;
   height: 50px;
   border-radius: 25px;
+  margin: auto;
+  margin-top: 20px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: white;
   border: none;
@@ -163,7 +168,8 @@ body {
   background-color: #F3F3F3;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: auto;
+  margin: auto;
   align-items: center;
 }
 
@@ -236,6 +242,7 @@ body {
 .footer__info {
   background-color: #353535;
   color: #FFF;
+  box-sizing: border-box;
   padding: 25px;
 }
 
@@ -276,6 +283,10 @@ body {
 }
 
 /*********page restaurant*************/
+.main__restau {
+  position: relative;
+}
+
 .img-restau {
   width: 100%;
   -o-object-fit: cover;
@@ -288,15 +299,21 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #F7F7F7;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  width: 375px;
+  height: 1243px;
+  left: calc(50% - 187.5px);
+  top: 220px;
 }
 
 .menu__header {
   display: flex;
   flex-direction: row;
+  padding: 25px;
   width: 341px;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .menu__title {
@@ -328,7 +345,7 @@ body {
   width: 40px;
 }
 
-.btn__square-menu {
+.menu__card {
   height: 69px;
   width: 349px;
   border-radius: 15px;
@@ -336,21 +353,24 @@ body {
   color: black;
   border: none;
   box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none;
-  display: inline-block;
   cursor: pointer;
   margin-bottom: 25px;
   font-size: 16px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px;
+  padding: 0;
 }
 
 .menu__text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  width: 80%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .dish__name {
@@ -377,8 +397,56 @@ body {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: 27px;
+  height: 18px;
   letter-spacing: 0em;
   text-align: center;
+}
+
+.clic-zone {
+  width: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  background-color: #99E2D0;
+  color: #FFF;
+  border-radius: 0 15px 15px 0;
+  transition-property: transform;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
+
+.clic-zone:active {
+  width: 18%;
+  opacity: 1;
+  transform: translateX -18%;
+}
+
+/*******test clic**********/
+.checkbox-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-content {
+  display: block;
+  width: 100px;
+  height: 150px;
+  background: #008766;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .toogle-content {
+  background: #9356DC;
 }
 
 /*****@mediasqueries*******/
@@ -388,6 +456,9 @@ body {
   }
   .header__logo {
     height: 96px;
+  }
+  .main {
+    position: relative;
   }
   .explore__title {
     width: auto;
@@ -425,9 +496,25 @@ body {
     width: 45%;
     margin-bottom: 40px;
   }
+  /****************pages restaurants******/
+  .img-restau {
+    height: 383px;
+  }
+  .menu {
+    width: 1055px;
+    margin: auto;
+    height: 1221px;
+    left: 193px;
+    top: 350px;
+  }
+  .menu__card {
+    width: 634px;
+  }
   .footer__info {
     display: flex;
     flex-direction: row;
+    width: 1440px;
+    margin: auto;
     height: 114px;
     justify-content: flex-end;
     align-items: flex-end;
