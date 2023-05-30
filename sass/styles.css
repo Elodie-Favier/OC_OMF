@@ -343,6 +343,7 @@ body {
 .blue-line {
   border: 1px solid #99E2D0;
   width: 40px;
+  margin: 10px 0 15px;
 }
 
 .menu__card {
@@ -365,12 +366,17 @@ body {
 
 .menu__text {
   display: flex;
-  flex-direction: column;
-  width: 80%;
+  flex-direction: row;
+  width: 572px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   padding-left: 10px;
   padding-bottom: 10px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
 }
 
 .dish__name {
@@ -416,37 +422,14 @@ body {
   background-color: #99E2D0;
   color: #FFF;
   border-radius: 0 15px 15px 0;
-  transition-property: transform;
-  transition: width 1s, height 1s, background-color 1s, transform 1s;
+  transition-timing-function: cubic-bezier(0.17, 0.57, 0.85, 0.79);
 }
 
-.clic-zone:active {
-  width: 18%;
+.menu__text:hover + .clic-zone {
+  width: 35%;
+  transform: translateX -20%;
   opacity: 1;
-  transform: translateX -18%;
-}
-
-/*******test clic**********/
-.checkbox-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.toggle-content {
-  display: block;
-  width: 100px;
-  height: 150px;
-  background: #008766;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox]:checked + .toogle-content {
-  background: #9356DC;
+  transition: all 400ms;
 }
 
 /*****@mediasqueries*******/
@@ -509,6 +492,9 @@ input[type=checkbox]:checked + .toogle-content {
   }
   .menu__card {
     width: 634px;
+  }
+  .menu__text:hover + .clic-zone {
+    width: 15%;
   }
   .footer__info {
     display: flex;

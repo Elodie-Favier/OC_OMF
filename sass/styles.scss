@@ -353,6 +353,7 @@ body {
 .blue-line {
     border: 1px solid $fourth-color;
     width: 40px;
+    margin: 10px 0 15px;
 }
 
 .menu__card {
@@ -375,14 +376,17 @@ body {
 
 .menu__text {
     display: flex;
-    flex-direction: column;
-    width: 80%;
+    flex-direction: row;
+    width: 572px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding-left: 10px;
     padding-bottom: 10px;
 }
-
+.dish {
+    display: flex;
+    flex-direction: column;
+}
 .dish__name {
     font-family: Roboto;
     font-size: 18px;
@@ -426,41 +430,16 @@ body {
     background-color: $fourth-color;
     color: #FFF;
     border-radius: 0 15px 15px 0;
-    transition-property: transform;
-    transition: width 1s, height 1s, background-color 1s, transform 1s;
+    transition-timing-function: cubic-bezier(.17,.57,.85,.79);
 }
 
-.clic-zone:active {
-    width: 18%;
+.menu__text:hover + .clic-zone {
+    width: 35%;
+    transform: translateX (-20%);
     opacity: 1;
-    transform: translateX (-18%);
+    transition:all 400ms;
+    
 }
-
-/*******test clic**********/
-.checkbox-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.toggle-content {
-    display: block;
-    width: 100px;
-    height: 150px;
-    background: $sixth-color;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="checkbox"]:checked+.toogle-content {
-    background: $third-color;
-}
-
-
-
 
 /*****@mediasqueries*******/
 @media screen and (min-width:1024px) {
@@ -539,7 +518,9 @@ input[type="checkbox"]:checked+.toogle-content {
     .menu__card {
         width: 634px;
     }
-
+    .menu__text:hover + .clic-zone {
+        width: 15%;
+    }
     .footer__info {
         display: flex;
         flex-direction: row;
