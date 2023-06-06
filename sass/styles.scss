@@ -1,4 +1,5 @@
 //*Mes variables couleur
+
 $white-color:#FFF;
 $background-color: #F7F7F7;
 $secondary-color: #F3F3F3;
@@ -58,7 +59,7 @@ body {
     height: 1450px;
     z-index: 1;
     background:$background-color;
-    animation: animload 2000ms 9700ms ease-in-out forwards;
+    animation: animload 2000ms 5700ms ease-in-out forwards;
 }
 .load {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -75,7 +76,7 @@ body {
         letter-spacing: 2px;
         color:$white-color;
         font-family: 'Shrikhand', cursive;
-        font-size: 8em;
+        font-size: 2em;
         margin-top: 10px;
         box-sizing: border-box;
         animation: animload__letter 2s 150ms ease-in 4 alternate;
@@ -188,6 +189,7 @@ body {
 .btn-rounded:hover {
     opacity: 0.8;
     transition: opacity 250ms;
+    box-shadow: 0px 6px 10px 0px #00000050;
 }
 
 .operation {
@@ -239,10 +241,12 @@ body {
     background-color: $third-color;
     border-radius: 15px;
 }
-
+.restau__title {
+    padding: 50px 20px 25px;
+}
 .restau__cards {
     padding: 50px 0;
-    background-color: $secondary-color;
+    background-color: $background-color;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -454,9 +458,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
-    padding-bottom: 10px;
 }
 .dish {
     display: flex;
@@ -504,7 +507,7 @@ body {
 }
 
 .clic-zone {
-    width: 1px;
+    width: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,15 +521,100 @@ body {
 }
 
 .menu__card:hover > .clic-zone {
-    width: 100px;
+    width: 20%;
     transform: translate (-100%);
     opacity: 1;
     transition:all 400ms;
     
 }
 
-/*****@mediasqueries*******/
+/*****@medias queries*******/
+//*Tablette more than 768px
+
+@media screen and (min-width:768px){
+//**index
+
+.main-container {
+    width: 768px;
+}
+.load__letter{
+    font-size: 4em;
+}
+.explore__title, .explore__subtitle {
+    width: auto;
+}
+.operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.operation__bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.operation__title {
+    padding: 50px 0px;
+    margin: auto;
+}
+.btn__square {
+    width: 400px;
+}
+.restau {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.restau__title {
+    margin: auto;
+    padding: 50px 0px;
+}
+.restau__cards{
+    width: 100%;
+}
+.card {
+    margin: auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.footer__info{
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.footer__logo {
+    order: 2;
+}
+
+.footer__info__text {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    width: 661px;
+    justify-content: space-around;
+}
+//**restaurant page
+.menu {
+    left: calc(50% - 382.5px);
+    width: 768px;
+}
+.menu__card {
+    width: 500px;
+}
+.btn-rounded {
+    margin-top: 10px;
+}
+}
+    
+
+
 @media screen and (min-width:1024px) {
+    .load__letter{
+        font-size: 8em;
+    }
+    
     .main-container {
         width: 1440px; 
         height: 1600px;
@@ -550,17 +638,25 @@ body {
     }
 
     .operation {
-        padding-left: 180px;
+        padding-left: 190px;
     }
-
+    .operation__bloc {
+        display: flex;
+        flex-direction: column;
+    }
     .operation__title {
         padding: 50px 0 25px;
+        width: 85%;
+        margin: 0;
     }
 
     .btn__operation {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 85%;
+    }
+    .btn__square{
+        width: 323px;
     }
 
     .restau {
@@ -568,7 +664,8 @@ body {
     }
 
     .restau__title {
-        padding: 50px 180px 25px;
+        padding: 50px 190px 25px;
+        margin: 0;
     }
 
     .restau__cards {
@@ -597,7 +694,6 @@ body {
         height: 1221px;
         left: 193px;
         top: 350px;
-
     }
 
     .menu__card {
