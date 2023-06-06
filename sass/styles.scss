@@ -46,10 +46,13 @@ $ninth-color: #353535;
 		transform-origin: 100% 0%;
 	}
 }
+
 /******Mobile homepage*********/
+
 body {
     margin: 0;
 }
+
 /***Loader***/
 .loader {
     position: absolute;
@@ -79,7 +82,7 @@ body {
         font-size: 2em;
         margin-top: 10px;
         box-sizing: border-box;
-        animation: animload__letter 2s 150ms ease-in 4 alternate;
+        animation: animload__letter 2s 150ms ease-in 3 alternate;
     }
 }
 * {
@@ -136,19 +139,16 @@ body {
 .fa-heart {
     display: flex;
     transition: transform 450ms, background-color 300ms 150ms;
-
+    &:hover {
+        font-weight: 800;
+        opacity: 1;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
 }
-
-.fa-heart:hover {
-    font-weight: 800;
-    opacity: 1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all 400ms;
-}
-
 .explore {
     background-color: $secondary-color;
     height: 200px;
@@ -184,12 +184,11 @@ body {
     display: inline-block;
     cursor: pointer;
     font-size: 16px;
-}
-
-.btn-rounded:hover {
-    opacity: 0.8;
-    transition: opacity 250ms;
-    box-shadow: 0px 6px 10px 0px #00000050;
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 250ms;
+        box-shadow: 0px 6px 10px 0px #00000050;
+    }
 }
 
 .operation {
@@ -201,17 +200,17 @@ body {
     font-size: 24px;
 }
 
-.btn__operation {
+.cards__operation {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.btn__box {
+.card__box {
     position: relative;
 }
 
-.btn__square {
+.card__operation {
     width: 323px;
     height: 72px;
     border-radius: 20px;
@@ -241,6 +240,9 @@ body {
     background-color: $third-color;
     border-radius: 15px;
 }
+.restau{
+    background-color: $background-color;
+}
 .restau__title {
     padding: 50px 20px 25px;
 }
@@ -258,7 +260,7 @@ body {
     margin: 0 20px 30px;
 }
 
-.card {
+.restau__card {
     width: 90%;
     height: 251px;
     background-color: #FFF;
@@ -267,11 +269,10 @@ body {
     margin: 0 20px;
     border-radius: 15px;
     margin-bottom: 10px;
-}
-
-.card a {
-    text-decoration: none;
-    color: black;
+        & > a {
+            text-decoration: none;
+            color: black;
+        }
 }
 
 .card__img-badge {
@@ -311,14 +312,6 @@ body {
     gap: 5px;
 }
 
-.like {
-    background: gray;
-}
-
-.like:focus {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
 .footer__info {
     background-color: $ninth-color;
     color: #FFF;
@@ -344,20 +337,17 @@ body {
 
 .footer__info__text {
     font-family: Roboto;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
-}
-
-.footer__info__text p {
-    margin-bottom: 5px;
-}
-
-.footer__info__text .fa-solid {
-    margin-left: 10px;
+    & > p {
+        margin-bottom: 5px;
+    }
+    & > .fa-solid{
+        margin-left: 10px;
+    }
 }
 
 .footer__link {
@@ -413,13 +403,13 @@ body {
     align-items: flex-start;
     margin-bottom: 20px;
     background-color: $background-color;
-    animation: bloc-display 1s cubic-bezier(0.32, 0, 0.67, 0) 150ms 1 normal backwards;
+    animation: bloc-display 1110.63ms cubic-bezier(0.32, 0, 0.67, 0) 150ms 1 normal backwards;
 }
  .menu__bloc--2 {
-         animation-delay:1150ms;
+         animation-delay:1244.0233430809737ms;;
   }
   .menu__bloc--3 {
-    animation-delay:2150ms;
+    animation-delay:2244.0228170321134ms;;
 }
 .menu__subtitle {
     font-family: 'Roboto';
@@ -557,7 +547,7 @@ body {
     padding: 50px 0px;
     margin: auto;
 }
-.btn__square {
+.card__operation {
     width: 400px;
 }
 .restau {
@@ -572,7 +562,7 @@ body {
 .restau__cards{
     width: 100%;
 }
-.card {
+.restau__card {
     margin: auto;
     width: 70%;
     margin-bottom: 20px;
@@ -595,7 +585,7 @@ body {
     width: 661px;
     justify-content: space-around;
 }
-//**restaurant page
+//**restaurant pages
 .menu {
     left: calc(50% - 382.5px);
     width: 768px;
@@ -629,43 +619,27 @@ body {
     }
 
     .explore__title {
-        width: auto;
         font-size: 40px;
     }
-
-    .explore__subtitle {
-        width: auto;
-    }
-
     .operation {
         padding-left: 190px;
-    }
-    .operation__bloc {
-        display: flex;
-        flex-direction: column;
     }
     .operation__title {
         padding: 50px 0 25px;
         width: 85%;
-        margin: 0;
     }
 
-    .btn__operation {
+    .cards__operation {
         flex-direction: row;
         justify-content: space-around;
         width: 85%;
     }
-    .btn__square{
+    .card__operation{
         width: 323px;
-    }
-
-    .restau {
-        background-color: $background-color;
     }
 
     .restau__title {
         padding: 50px 190px 25px;
-        margin: 0;
     }
 
     .restau__cards {
@@ -677,7 +651,7 @@ body {
         justify-content: space-between;
     }
 
-    .card {
+    .restau__card {
         width: 45%;
         margin-bottom: 40px;
     }
@@ -703,26 +677,10 @@ body {
         width: 15%;
     }
     .footer__info {
-        display: flex;
-        flex-direction: row;
         width: 1440px;
         margin: auto;
         height: 114px;
-        justify-content: flex-end;
-        align-items: flex-end;
         padding: 30px 25px;
         gap: 16px;
-    }
-
-    .footer__logo {
-        order: 2;
-    }
-
-    .footer__info__text {
-        order: 1;
-        display: flex;
-        flex-direction: row;
-        width: 661px;
-        justify-content: space-around;
     }
 }

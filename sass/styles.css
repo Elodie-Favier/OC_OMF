@@ -63,7 +63,7 @@ body {
   font-size: 2em;
   margin-top: 10px;
   box-sizing: border-box;
-  animation: animload__letter 2s 150ms ease-in 4 alternate;
+  animation: animload__letter 2s 150ms ease-in 3 alternate;
 }
 
 * {
@@ -121,7 +121,6 @@ body {
   display: flex;
   transition: transform 450ms, background-color 300ms 150ms;
 }
-
 .fa-heart:hover {
   font-weight: 800;
   opacity: 1;
@@ -168,7 +167,6 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
-
 .btn-rounded:hover {
   opacity: 0.8;
   transition: opacity 250ms;
@@ -184,17 +182,17 @@ body {
   font-size: 24px;
 }
 
-.btn__operation {
+.cards__operation {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.btn__box {
+.card__box {
   position: relative;
 }
 
-.btn__square {
+.card__operation {
   width: 323px;
   height: 72px;
   border-radius: 20px;
@@ -225,6 +223,10 @@ body {
   border-radius: 15px;
 }
 
+.restau {
+  background-color: #F7F7F7;
+}
+
 .restau__title {
   padding: 50px 20px 25px;
 }
@@ -243,7 +245,7 @@ body {
   margin: 0 20px 30px;
 }
 
-.card {
+.restau__card {
   width: 90%;
   height: 251px;
   background-color: #FFF;
@@ -253,8 +255,7 @@ body {
   border-radius: 15px;
   margin-bottom: 10px;
 }
-
-.card a {
+.restau__card > a {
   text-decoration: none;
   color: black;
 }
@@ -297,14 +298,6 @@ body {
   gap: 5px;
 }
 
-.like {
-  background: gray;
-}
-
-.like:focus {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
 .footer__info {
   background-color: #353535;
   color: #FFF;
@@ -330,19 +323,16 @@ body {
 
 .footer__info__text {
   font-family: Roboto;
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
 }
-
-.footer__info__text p {
+.footer__info__text > p {
   margin-bottom: 5px;
 }
-
-.footer__info__text .fa-solid {
+.footer__info__text > .fa-solid {
   margin-left: 10px;
 }
 
@@ -400,15 +390,15 @@ body {
   align-items: flex-start;
   margin-bottom: 20px;
   background-color: #F7F7F7;
-  animation: bloc-display 1s cubic-bezier(0.32, 0, 0.67, 0) 150ms 1 normal backwards;
+  animation: bloc-display 1110.63ms cubic-bezier(0.32, 0, 0.67, 0) 150ms 1 normal backwards;
 }
 
 .menu__bloc--2 {
-  animation-delay: 1150ms;
+  animation-delay: 1244.023343081ms;
 }
 
 .menu__bloc--3 {
-  animation-delay: 2150ms;
+  animation-delay: 2244.0228170321ms;
 }
 
 .menu__subtitle {
@@ -543,7 +533,7 @@ body {
     padding: 50px 0px;
     margin: auto;
   }
-  .btn__square {
+  .card__operation {
     width: 400px;
   }
   .restau {
@@ -558,7 +548,7 @@ body {
   .restau__cards {
     width: 100%;
   }
-  .card {
+  .restau__card {
     margin: auto;
     width: 70%;
     margin-bottom: 20px;
@@ -606,38 +596,25 @@ body {
     position: relative;
   }
   .explore__title {
-    width: auto;
     font-size: 40px;
-  }
-  .explore__subtitle {
-    width: auto;
   }
   .operation {
     padding-left: 190px;
   }
-  .operation__bloc {
-    display: flex;
-    flex-direction: column;
-  }
   .operation__title {
     padding: 50px 0 25px;
     width: 85%;
-    margin: 0;
   }
-  .btn__operation {
+  .cards__operation {
     flex-direction: row;
     justify-content: space-around;
     width: 85%;
   }
-  .btn__square {
+  .card__operation {
     width: 323px;
-  }
-  .restau {
-    background-color: #F7F7F7;
   }
   .restau__title {
     padding: 50px 190px 25px;
-    margin: 0;
   }
   .restau__cards {
     flex-direction: row;
@@ -647,7 +624,7 @@ body {
     margin: auto;
     justify-content: space-between;
   }
-  .card {
+  .restau__card {
     width: 45%;
     margin-bottom: 40px;
   }
@@ -671,24 +648,10 @@ body {
     width: 15%;
   }
   .footer__info {
-    display: flex;
-    flex-direction: row;
     width: 1440px;
     margin: auto;
     height: 114px;
-    justify-content: flex-end;
-    align-items: flex-end;
     padding: 30px 25px;
     gap: 16px;
-  }
-  .footer__logo {
-    order: 2;
-  }
-  .footer__info__text {
-    order: 1;
-    display: flex;
-    flex-direction: row;
-    width: 661px;
-    justify-content: space-around;
   }
 }/*# sourceMappingURL=styles.css.map */
