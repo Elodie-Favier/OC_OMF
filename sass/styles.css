@@ -53,7 +53,7 @@ body {
   width: 70%;
   border-radius: 75px;
   position: absolute;
-  top: 25%;
+  top: 10%;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -79,7 +79,8 @@ body {
   font-size: x-large;
 }
 
-.fa-mobile-screen-button, .fa-list-ul {
+.fa-mobile-screen-button,
+.fa-list-ul {
   color: #7E7E7E;
   font-size: x-large;
 }
@@ -182,6 +183,7 @@ body {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: white;
   border: none;
+  margin-top: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   text-decoration: none;
   display: inline-block;
@@ -442,12 +444,14 @@ body {
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
+  margin-left: 11px;
 }
 
 .blue-line {
   border: 1px solid #99E2D0;
   width: 40px;
   margin: 10px 0 15px;
+  margin-left: 11px;
 }
 
 .menu__card {
@@ -459,7 +463,7 @@ body {
   border: none;
   box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  margin: 0 5px 10px;
+  margin: 0 10px 10px;
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -534,7 +538,7 @@ body {
 
 .menu__card:hover > .clic-zone {
   width: 70px;
-  transform: translate -70px;
+  transform: translate(0);
   opacity: 1;
   transition: all 400ms;
 }
@@ -547,7 +551,8 @@ body {
   .load__logo {
     font-size: 4em;
   }
-  .explore__title, .explore__subtitle {
+  .explore__title,
+  .explore__subtitle {
     width: auto;
   }
   .operation {
@@ -623,6 +628,9 @@ body {
     left: calc(50% - 382.5px);
     width: 768px;
   }
+  .menu__bloc {
+    width: 505px;
+  }
   .menu__card {
     width: 500px;
   }
@@ -651,8 +659,9 @@ body {
     padding-left: 190px;
   }
   .operation__title {
-    padding: 50px 0 25px;
+    padding: 50px 15px 25px;
     width: 85%;
+    margin: 0;
   }
   .cards__operation {
     flex-direction: row;
@@ -661,9 +670,16 @@ body {
   }
   .card__operation {
     width: 323px;
+    justify-content: center;
+  }
+  .fa-mobile-screen-button,
+  .fa-list-ul,
+  .fa-store {
+    margin-right: 20px;
   }
   .restau__title {
-    padding: 50px 190px 25px;
+    padding: 50px 207px 25px;
+    margin: 0;
   }
   .restau__cards {
     flex-direction: row;
@@ -689,6 +705,9 @@ body {
     height: 1221px;
     left: 193px;
     top: 350px;
+  }
+  .menu__bloc {
+    width: 634px;
   }
   .menu__card {
     width: 634px;
