@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
         rel="stylesheet">
@@ -16,7 +13,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../sass/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -24,7 +20,7 @@
         <header class="header">
             <div class="go-back"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
             <div class="header__logo">
-                <h1 class="title__logo">Ohmyfood</h1>
+                <div class="title__logo"><img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo du site"></div>
             </div>
         </header>
         <div class="main">
@@ -146,22 +142,26 @@
         </div>
 
     </div>
-    <footer class="footer__info">
-        <h2 class="footer__logo">Ohmyfood</h2>
-        <div class="footer__info__text">
-            <p><i class="fa-solid fa-utensils"></i>
-                <a class="footer__link" href="#" target="_blank">Proposer un restaurant</a>
-            </p>
-            <p>
-                <i class="fa-solid fa-handshake-angle"></i>
-                <a class="footer__link" href="#" target="_blank">Devenir partenaire</a>
-            </p>
-            <p><a class="footer__link" href="#" target="_blank">Mentions légales</a></p>
-            <p><a class="footer__link" href="mailto:hello.elo@monmail.com" target="_blank">Contact</a></p>
+    <footer class="footer">
+        <div class="footer__info">
+            <h2 class="footer__logo">ohmyfood</h2>
+            <div class="footer__info__text">
+                <div class="info__text-logo">
+                    <p><i class="fa-solid fa-utensils fa-sm"></i>
+                        <a class="footer__link" href="#" target="_blank">Proposer un restaurant</a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-handshake-angle fa-sm"></i></i>
+                        <a class="footer__link " href="#" target="_blank">Devenir partenaire</a>
+                    </p>
+                </div>
+                <div class="info__text-nologo" <p><a class="footer__link" href="#" target="_blank">Mentions
+                        légales</a></p>
+                    <p><a class="footer__link" href="mailto:hello.elo@monmail.com" target="_blank">Contact</a></p>
+                </div>
+            </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>
